@@ -18,3 +18,7 @@ class Palette(Plugin):
         print("Palette plugin activated")
         logger = logging.getLogger(__name__)
         logger.info("I am bad at this.")
+
+
+def load_component(config: ConfigHelper) -> Palette:
+    return Palette(config)
