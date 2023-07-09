@@ -6,6 +6,8 @@ class Palette(Plugin):
     def __init__(self, manager):
         super().__init__(manager)
         self.manager.register_upload_hook(self.preprocess_file)
+        print("Palette plugin activated")
+        logger.info("Palette plugin activated")
     def register(self):
         self.manager.register_action("palette", self.palette)
 
